@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -8,30 +7,57 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ff0055, #990033);
+            font-family: 'Tajawal', Arial, sans-serif;
+            background: linear-gradient(135deg, #ff0055, #4d0019);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 15px;
         }
         .login-box {
-            background: rgba(0,0,0,0.8);
-            padding: 40px 30px;
+            background: rgba(0,0,0,0.9);
+            padding: 25px 20px;
             border-radius: 20px;
             text-align: center;
-            max-width: 400px;
+            max-width: 420px;
             width: 100%;
             border: 2px solid #ff0055;
-            box-shadow: 0 0 30px #ff0055;
+            box-shadow: 0 0 25px #ff0055;
         }
-        .logo { font-size: 3em; margin-bottom: 10px; }
-        h1 { color: #ff0055; font-size: 1.8em; margin-bottom: 20px; }
+        .dhikr {
+            background: #111;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #00ff88;
+            font-size: 0.95em;
+            color: #00ff88;
+        }
+        .logo { font-size: 2.5em; margin-bottom: 5px; }
+        h1 { color: #ff0055; font-size: 1.6em; margin-bottom: 10px; }
+        .packages {
+            background: #1a1a1a;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border: 1px solid #333;
+        }
+        .packages h3 { color: #ffaa00; margin-bottom: 10px; font-size: 1.1em; }
+        .pack {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #333;
+            font-size: 1em;
+        }
+        .pack:last-child { border-bottom: none; }
+        .pack span:first-child { color: #ccc; }
+        .pack span:last-child { color: #ff0055; font-weight: bold; }
         input {
             width: 100%;
-            padding: 15px;
-            margin: 15px 0;
+            padding: 14px;
+            margin: 15px 0 10px 0;
             border: 2px solid #ff0055;
             background: #111;
             color: white;
@@ -41,7 +67,7 @@
         }
         .btn {
             width: 100%;
-            padding: 15px;
+            padding: 14px;
             background: #ff0055;
             color: white;
             border: none;
@@ -49,45 +75,67 @@
             font-size: 1.2em;
             font-weight: bold;
             cursor: pointer;
-            margin-top: 10px;
         }
-        .footer { color: #aaa; margin-top: 25px; font-size: 0.9em; }
-        .price { color: #ffaa00; font-size: 1.3em; margin: 15px 0; }
+        .support {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #333;
+        }
+        .support p { color: #aaa; font-size: 0.9em; margin: 5px 0; }
+        .support .phone { color: #00ff88; font-size: 1.1em; font-weight: bold; }
     </style>
 </head>
 <body>
-    <!-- نغمة الترحيب تشتغل تلقائي -->
-    <audio autoplay>
+    <!-- نغمة الترحيب -->
+    <audio id="welcomeSound">
         <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2cba4c6e7d.mp3" type="audio/mpeg">
     </audio>
 
     <div class="login-box">
+        <div class="dhikr">
+            سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+        </div>
+        
         <div class="logo">🌐</div>
         <h1>YOSEF MOHAMED NETWORKS</h1>
-        <p style="color:#ccc; margin-bottom:20px;">مرحباً بك في شبكتنا</p>
+        <p style="color:#ccc; margin-bottom:15px; font-size:0.9em;">مرحباً بك في شبكتنا</p>
         
-        <div class="price">ساعة = 1 دينار</div>
+        <div class="packages">
+            <h3>📦 الباقات المتوفرة</h3>
+            <div class="pack"><span>1 جيجا</span><span>1 د.ل</span></div>
+            <div class="pack"><span>3 جيجا</span><span>2.5 د.ل</span></div>
+            <div class="pack"><span>5 جيجا</span><span>4 د.ل</span></div>
+            <div class="pack"><span>10 جيجا</span><span>7 د.ل</span></div>
+            <div class="pack"><span>يوم كامل</span><span>3 د.ل</span></div>
+            <div class="pack"><span>أسبوع كامل</span><span>15 د.ل</span></div>
+        </div>
         
-        <form onsubmit="playSound(); return false;">
+        <form onsubmit="login(); return false;">
             <input type="text" placeholder="أدخل كود الكرت هنا" required>
             <button type="submit" class="btn">تسجيل الدخول</button>
         </form>
         
-        <div class="footer">
-            للدعم الفني: 218844933543<br>
-            تصميم صفحات هوتسبوت: 75 د.ل
+        <div class="support">
+            <p>الدعم الفني 24 ساعة</p>
+            <p class="phone">📞 218844933543</p>
+            <p style="font-size:0.8em; margin-top:10px;">تصميم صفحات هوتسبوت: 75 د.ل</p>
         </div>
     </div>
 
-    <!-- نغمة النجاح لما يضغط تسجيل دخول -->
+    <!-- نغمة النجاح -->
     <audio id="successSound">
         <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_0625c1539c.mp3" type="audio/mpeg">
     </audio>
 
     <script>
-        function playSound() {
+        // شغل نغمة الترحيب لما يضغط في الصفحة
+        document.body.addEventListener('click', function() {
+            document.getElementById('welcomeSound').play();
+        }, { once: true });
+
+        function login() {
             document.getElementById('successSound').play();
-            alert('تم تسجيل الدخول بنجاح ✅\nهذا نموذج فقط');
+            alert('تم تسجيل الدخول بنجاح ✅\nهذا نموذج للعرض فقط');
         }
     </script>
 </body>
