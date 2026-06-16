@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات الألعاب - Youbfill</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #1a0a2e, #0a0a0a);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            min-height: 100vh;
+        }
+        .card {
+            background: rgba(26, 26, 26, 0.9);
+            padding: 40px 30px;
+            border-radius: 20px;
+            margin: 30px auto;
+            max-width: 650px;
+            border: 2px solid #ff00ff;
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
+        }
+        h1 { 
+            color: #ff00ff; 
+            font-size: 2.8rem; 
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+        h2 { 
+            color: #fff; 
+            font-size: 1.8rem; 
+            margin: 20px 0;
+        }
+        p { 
+            font-size: 1.3rem; 
+            color: #ccc; 
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+        .btn {
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .phone { background: #ff00ff; color: #000; }
+        .whatsapp { background: #25D366; color: #fff; }
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px currentColor;
+        }
+        .dhikr {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #00ff88;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        .back {
+            display: inline-block;
+            margin-top: 20px;
+            color: #ccc;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🎮 خدمات الألعاب</h1>
+        <h2>Youbfill</h2>
+        
+        <p>✅ شحن ببجي موبايل - فري فاير - كول أوف ديوتي</p>
+        <p>✅ بطاقات ستور بلايستيشن - اكسبوكس - ستيم</p>
+        <p>✅ تحميل أحدث الألعاب للكمبيوتر والهاتف</p>
+        <p>✅ صيانة وتحديث أجهزة بلايستيشن</p>
+
+        <a href="tel:0944833543" class="btn phone">
+            📞 اتصال: 0944833543
+        </a>
+        
+        <a href="https://wa.me/218944833543?text=السلام عليكم Youbfill، نبي نستفسر على خدمات الألعاب" class="btn whatsapp">
+            💬 واتساب مباشر
+        </a>
+
+        <a href="Portfolio.html" class="back">🔙 رجوع للصفحة الرئيسية</a>
+
+        <div class="dhikr">
+            لا إله إلا الله محمد رسول الله
+        </div>
+    </div>
+</body>
+</html>
