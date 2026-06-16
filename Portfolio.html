@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -25,9 +26,13 @@
         .btn {
             display: inline-block; padding: 15px 35px; font-size: 18px;
             font-weight: bold; text-decoration: none; border-radius: 50px;
-            background: #25D366; color: white; transition: 0.3s;
+            background: #25D366; color: white; transition: 0.3s; margin: 5px;
         }
         .btn:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(37,211,102,0.4); }
+        .btn-service {
+            background: linear-gradient(45deg, #8b5cf6, #06b6d4);
+        }
+        .btn-service:hover { box-shadow: 0 10px 25px rgba(139,92,246,0.4); }
         .section-title { text-align: center; font-size: 28px; margin: 50px 0 30px; }
         .projects {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -45,6 +50,10 @@
             display: inline-block; background: #8b5cf6; padding: 5px 15px;
             border-radius: 20px; font-size: 14px; margin: 5px;
         }
+        .services-buttons {
+            text-align: center;
+            margin: 30px 0;
+        }
         footer { text-align: center; padding: 40px 20px; color: #64748b; }
     </style>
 </head>
@@ -55,6 +64,11 @@
             <h1>يوسف محمد</h1>
             <p class="bio">مصمم مواقع و مطور ويب | نحب العمل ونتعلم بسرعة 🚀</p>
             <a href="https://wa.me/21892xxxxxxx" class="btn">📱 كلمني واتساب</a>
+            
+            <div class="services-buttons">
+                <a href="networks.html" class="btn btn-service">🌐 خدمات الشبكات</a>
+                <a href="games.html" class="btn btn-service">🎮 خدمات الألعاب</a>
+            </div>
         </header>
 
         <h2 class="section-title">💼 اعمالي</h2>
@@ -70,20 +84,22 @@
             </div>
 
             <div class="card">
-                <h3>موقع قادم</h3>
-                <p>قريباً... موقع حجوزات احترافي ☕</p>
-                <span class="tag">قيد التطوير</span>
+                <h3>خدمات الشبكات</h3>
+                <p>تركيب وصيانة شبكات مايكروتك في بنغازي</p>
+                <span class="tag">Mikrotik</span>
+                <span class="tag">Networks</span>
             </div>
 
             <div class="card">
-                <h3>فكرتك الجاية</h3>
-                <p>عندك مشروع؟ كلمني نديروه مع بعض 💪</p>
-                <span class="tag">متاح للعمل</span>
+                <h3>خدمات الألعاب</h3>
+                <p>شحن UC وجواهر للألعاب بأفضل الأسعار - Youbfill</p>
+                <span class="tag">PUBG</span>
+                <span class="tag">Free Fire</span>
             </div>
         </div>
 
         <footer>
-            <p>© 2026يوسف محمد - صنع و ❤️ مبرمج ☕</p>
+            <p>© 2026 يوسف محمد - صنع و ❤️ مبرمج ☕</p>
         </footer>
     </div>
 </body>
