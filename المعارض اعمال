@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -53,8 +54,8 @@
         <header>
             <div class="avatar">👑</div>
             <h1>يوسف محمد</h1>
-            <p class="bio">مصمم مواقع و مطور ويب | كل عام   وانتم الف خير 🚀</p>
-            <a href="https://wa.me/218944833543" class="btn">📱 كلمني واتساب</a>
+            <p class="bio">مصمم مواقع و مطور ويب | كل عام وانتم بألف خير 🚀</p>
+            <a href="https://wa.me/218944833543" class="btn" target="_blank">📱 كلمني واتساب</a>
         </header>
 
         <h2 class="section-title">💼 اعمالي</h2>
@@ -66,7 +67,7 @@
                 <span class="tag">CSS</span>
                 <span class="tag">GitHub</span>
                 <br><br>
-                <a href="https://yf2424.github.io/YOSEF_MOHAMED-NETWORKS-/" style="color:#06b6d4;">🔗 شوف الموقع</a>
+                <a href="index.html" style="color:#06b6d4;" target="_blank">🔗 شوف الموقع</a>
             </div>
 
             <div class="card">
@@ -83,7 +84,7 @@
         </div>
 
         <footer>
-            <p>© 2026 يوسف محمد - صنع بـ ❤️ برمجة ☕</p>
+            <p>© 2026 يوسف محمد - صنع بـ ❤️ و برمجة ☕</p>
         </footer>
     </div>
 </body>
