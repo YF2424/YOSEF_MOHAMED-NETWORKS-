@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>يوسف محمد - البورتفوليو الرسمي</title>
+    <title>يوسف محمد - الموقع الرسمي</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -13,61 +12,55 @@
             color: #fff;
             text-align: center;
             padding: 40px 20px;
+            line-height: 2;
         }
         .dhikr {
-            background: #222;
-            color: #00ff88;
-            padding: 12px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            font-size: 1.2rem;
+            background: linear-gradient(90deg, #00ff88, #6a5aff);
+            color: #000;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            font-size: 1.3rem;
+            font-weight: bold;
         }
         h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
+            font-size: 3rem;
+            margin-bottom: 15px;
             background: linear-gradient(90deg, #00ff88, #00ccff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .subtitle { color: #aaa; font-size: 1.2rem; margin-bottom: 50px; }
-        .sites {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .site-card {
+        .subtitle { color: #aaa; font-size: 1.3rem; margin-bottom: 50px; }
+        .section {
             background: #1a1a1a;
             border-radius: 15px;
             padding: 35px 25px;
+            margin: 30px auto;
+            max-width: 700px;
             border: 2px solid #2a2a2a;
-            transition: 0.3s;
         }
-        .site-card:hover { transform: translateY(-10px); }
         .network { border-color: #00ff88; }
-        .network:hover { box-shadow: 0 15px 40px rgba(0,255,136,0.3); }
         .games { border-color: #6a5aff; }
-        .games:hover { box-shadow: 0 15px 40px rgba(106,90,255,0.3); }
-        .site-card h2 { font-size: 1.8rem; margin-bottom: 15px; }
+        .section h2 { font-size: 2rem; margin-bottom: 20px; }
         .network h2 { color: #00ff88; }
         .games h2 { color: #6a5aff; }
-        .site-card p { color: #aaa; margin-bottom: 25px; line-height: 1.7; }
+        .section p { color: #ddd; font-size: 1.2rem; }
+        .phone {
+            margin-top: 60px;
+            font-size: 1.6rem;
+            color: #00ff88;
+            direction: ltr;
+        }
         .btn {
             display: inline-block;
-            padding: 14px 35px;
+            padding: 15px 40px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
-        }
-        .btn-network { background: #00ff88; color: #000; }
-        .btn-games { background: #6a5aff; color: #fff; }
-        .phone {
-            margin-top: 60px;
-            font-size: 1.4rem;
-            color: #00ff88;
-            direction: ltr;
+            font-size: 1.2rem;
+            background: #00ff88;
+            color: #000;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -77,20 +70,23 @@
     <h1>يوسف محمد</h1>
     <p class="subtitle">شبكات • برمجة • ألعاب • حلول تقنية</p>
 
-    <div class="sites">
-        <div class="site-card network">
-            <h2>🖥️ قسم الشبكات والدعم</h2>
-            <p>برمجة، تصميم شبكات، سيرفرات، دعم فني، وحلول تقنية متكاملة للشركات والأفراد</p>
-            <a href="yousef-network.html" class="btn btn-network">ادخل الموقع</a>
-        </div>
-
-        <div class="site-card games">
-            <h2>🎮 قسم الألعاب والشحن</h2>
-            <p>شحن شدات ببجي، جواهر فري فاير، نقاط كود موبايل، وجميع الألعاب بأفضل الأسعار</p>
-            <a href="yousef-games.html" class="btn btn-games">ادخل الموقع</a>
-        </div>
+    <div class="section network">
+        <h2>🖥️ قسم الشبكات والدعم الفني</h2>
+        <p>
+            تصميم وتركيب الشبكات • برمجة مواقع وتطبيقات<br>
+            إدارة سيرفرات • دعم فني 24/7 • حلول تقنية متكاملة
+        </p>
     </div>
 
-    <div class="phone">📞 للتواصل: 218944933543</div>
+    <div class="section games">
+        <h2>🎮 قسم شحن الألعاب</h2>
+        <p>
+            شحن شدات ببجي موبايل • جواهر فري فاير<br>
+            نقاط كول اوف ديوتي • وجميع الألعاب بأفضل الأسعار
+        </p>
+    </div>
+
+    <div class="phone">📞 218944933543</div>
+    <a href="https://wa.me/218944933543" class="btn">تواصل واتساب</a>
 </body>
 </html>
