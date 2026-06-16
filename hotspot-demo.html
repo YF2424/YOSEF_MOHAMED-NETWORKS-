@@ -1,12 +1,94 @@
-<div class="section" style="border-color: #ff0055;">
-    <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=600" alt="هوتسبوت">
-    <h2 style="color: #ff0055;">صفحات هوتسبوت مايكروتك</h2>
-    <p>
-        تصميم صفحات هوتسبوت احترافية<br>
-        بألوان وشعار خاص بيك<br>
-        سريعة ومتوافقة مع جميع الأجهزة<br><br>
-        <strong style="color:#00ff88;">شوف النموذج:</strong><br>
-        <a href="hotspot-demo.html" class="btn" style="background:#ff0055; margin-top:10px;">معاينة صفحة الهوتسبوت</a><br><br>
-        <strong style="color:#ffaa00;">السعر: 75 د.ل للتصميم الواحد</strong>
-    </p>
-</div>
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOSEF NETWORKS Hotspot</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff0055, #990033);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .login-box {
+            background: rgba(0,0,0,0.8);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            border: 2px solid #ff0055;
+            box-shadow: 0 0 30px #ff0055;
+        }
+        .logo { font-size: 3em; margin-bottom: 10px; }
+        h1 { color: #ff0055; font-size: 1.8em; margin-bottom: 20px; }
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            border: 2px solid #ff0055;
+            background: #111;
+            color: white;
+            border-radius: 10px;
+            font-size: 1.1em;
+            text-align: center;
+        }
+        .btn {
+            width: 100%;
+            padding: 15px;
+            background: #ff0055;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .footer { color: #aaa; margin-top: 25px; font-size: 0.9em; }
+        .price { color: #ffaa00; font-size: 1.3em; margin: 15px 0; }
+    </style>
+</head>
+<body>
+    <!-- نغمة الترحيب تشتغل تلقائي -->
+    <audio autoplay>
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2cba4c6e7d.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="login-box">
+        <div class="logo">🌐</div>
+        <h1>YOSEF MOHAMED NETWORKS</h1>
+        <p style="color:#ccc; margin-bottom:20px;">مرحباً بك في شبكتنا</p>
+        
+        <div class="price">ساعة = 1 دينار</div>
+        
+        <form onsubmit="playSound(); return false;">
+            <input type="text" placeholder="أدخل كود الكرت هنا" required>
+            <button type="submit" class="btn">تسجيل الدخول</button>
+        </form>
+        
+        <div class="footer">
+            للدعم الفني: 218844933543<br>
+            تصميم صفحات هوتسبوت: 75 د.ل
+        </div>
+    </div>
+
+    <!-- نغمة النجاح لما يضغط تسجيل دخول -->
+    <audio id="successSound">
+        <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_0625c1539c.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function playSound() {
+            document.getElementById('successSound').play();
+            alert('تم تسجيل الدخول بنجاح ✅\nهذا نموذج فقط');
+        }
+    </script>
+</body>
+</html>
