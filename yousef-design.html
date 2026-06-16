@@ -1,92 +1,120 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>معرض اعمال يوسف محمد</title>
+    <title>تصاميم يوسف محمد - YOSEF DESIGNS</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Tahoma', Arial, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: white;
-            line-height: 1.6;
+            font-family: 'Cairo', Arial, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            padding: 20px;
         }
-        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
-        header { text-align: center; padding: 60px 20px; }
-        .avatar {
-            width: 120px; height: 120px; border-radius: 50%;
-            background: linear-gradient(45deg, #8b5cf6, #06b6d4);
-            margin: 0 auto 20px; display: flex; align-items: center;
-            justify-content: center; font-size: 50px; border: 4px solid white;
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid #00ff88;
+            margin-bottom: 40px;
         }
-        h1 { font-size: 36px; margin-bottom: 10px; }
-        .bio { font-size: 18px; color: #cbd5e1; margin-bottom: 30px; }
-        .btn {
-            display: inline-block; padding: 15px 35px; font-size: 18px;
-            font-weight: bold; text-decoration: none; border-radius: 50px;
-            background: #25D366; color: white; transition: 0.3s;
+        .header h1 {
+            font-size: 2.5rem;
+            color: #00ff88;
+            margin-bottom: 10px;
         }
-        .btn:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(37,211,102,0.4); }
-        .section-title { text-align: center; font-size: 28px; margin: 50px 0 30px; }
-        .projects {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px; margin-bottom: 50px;
-        }
-        .card {
-            background: rgba(255,255,255,0.05); border-radius: 15px;
-            padding: 25px; border: 1px solid rgba(255,255,255,0.1);
+        .header p { color: #aaa; font-size: 1.1rem; }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #00ff88;
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
             transition: 0.3s;
         }
-        .card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.1); }
-        .card h3 { font-size: 22px; margin-bottom: 10px; color: #8b5cf6; }
-        .card p { color: #cbd5e1; margin-bottom: 15px; }
-        .tag {
-            display: inline-block; background: #8b5cf6; padding: 5px 15px;
-            border-radius: 20px; font-size: 14px; margin: 5px;
+        .back-btn:hover {
+            background: #00cc6f;
+            transform: translateY(-2px);
         }
-        footer { text-align: center; padding: 40px 20px; color: #64748b; }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .design-card {
+            background: #1a1a1a;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #2a2a2a;
+            transition: 0.3s;
+        }
+        .design-card:hover {
+            transform: translateY(-8px);
+            border-color: #00ff88;
+            box-shadow: 0 10px 30px rgba(0,255,136,0.2);
+        }
+        .design-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: #333;
+        }
+        .design-info { padding: 20px; }
+        .design-info h3 {
+            color: #00ff88;
+            margin-bottom: 8px;
+            font-size: 1.3rem;
+        }
+        .design-info p { color: #aaa; line-height: 1.6; }
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #2a2a2a;
+            color: #666;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="avatar">👑</div>
-            <h1>يوسف محمد</h1>
-            <p class="bio">مصمم مواقع و مطور ويب | كل عام وانتم بألف خير 🚀</p>
-            <a href="https://wa.me/218944833543" class="btn" target="_blank">📱 كلمني واتساب</a>
-        </header>
+    <div class="header">
+        <h1>🎨 تصاميم يوسف محمد</h1>
+        <p>مجموعة من أعمالي في التصميم الجرافيكي والشبكات</p>
+        <a href="index.html" class="back-btn">← الرجوع للبورتفوليو</a>
+    </div>
 
-        <h2 class="section-title">💼 اعمالي</h2>
-        <div class="projects">
-            <div class="card">
-                <h3>موقع شخصي</h3>
-                <p>اول موقع ليا على GitHub Pages مع زر واتساب مباشر</p>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">GitHub</span>
-                <br><br>
-                <a href="index.html" style="color:#06b6d4;" target="_blank">🔗 شوف الموقع</a>
-            </div>
-
-            <div class="card">
-                <h3>موقع قادم</h3>
-                <p>قريباً... موقع حجوزات احترافي ☕</p>
-                <span class="tag">قيد التطوير</span>
-            </div>
-
-            <div class="card">
-                <h3>فكرتك الجاية</h3>
-                <p>عندك مشروع؟ كلمني نديروه مع بعض 💪</p>
-                <span class="tag">متاح للعمل</span>
+    <div class="gallery">
+        <div class="design-card">
+            <img src="https://via.placeholder.com/400x250/00ff88/000000?text=Design+1" alt="تصميم 1">
+            <div class="design-info">
+                <h3>تصميم شعار شبكات</h3>
+                <p>شعار احترافي لشركة خدمات شبكات وحلول تقنية</p>
             </div>
         </div>
 
-        <footer>
-            <p>© 2026 يوسف محمد - صنع بـ ❤️ و برمجة ☕</p>
-        </footer>
+        <div class="design-card">
+            <img src="https://via.placeholder.com/400x250/00ccff/000000?text=Design+2" alt="تصميم 2">
+            <div class="design-info">
+                <h3>بوستر سوشيال ميديا</h3>
+                <p>تصميم بوست إعلاني لخدمات الصيانة والدعم الفني</p>
+            </div>
+        </div>
+
+        <div class="design-card">
+            <img src="https://via.placeholder.com/400x250/ff0088/000000?text=Design+3" alt="تصميم 3">
+            <div class="design-info">
+                <h3>واجهة موقع</h3>
+                <p>تصميم UI/UX لموقع شركة تقنية معلومات</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 YOSEF MOHAMED NETWORKS - جميع الحقوق محفوظة</p>
     </div>
 </body>
 </html>
