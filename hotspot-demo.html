@@ -1,14 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YOSEF NETWORKS Hotspot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Tajawal', Arial, sans-serif;
-            background: linear-gradient(135deg, #ff0055, #4d0019);
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -16,84 +18,145 @@
             padding: 15px;
         }
         .login-box {
-            background: rgba(0,0,0,0.9);
+            background: rgba(0,0,0,0.85);
             padding: 25px 20px;
             border-radius: 20px;
             text-align: center;
             max-width: 420px;
             width: 100%;
-            border: 2px solid #ff0055;
-            box-shadow: 0 0 25px #ff0055;
+            border: 2px solid #ff0080;
+            box-shadow: 0 0 35px rgba(255,0,128,0.6);
+            backdrop-filter: blur(10px);
         }
         .dhikr {
-            background: #111;
+            background: linear-gradient(90deg, #00ff88, #00b8ff);
+            color: #000;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 12px;
             margin-bottom: 15px;
-            border: 1px solid #00ff88;
-            font-size: 0.95em;
-            color: #00ff88;
+            font-weight: 700;
+            font-size: 1em;
         }
-        .logo { font-size: 2.5em; margin-bottom: 5px; }
-        h1 { color: #ff0055; font-size: 1.6em; margin-bottom: 10px; }
-        .packages {
+        .date-box {
             background: #1a1a1a;
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ff0080;
+        }
+        .date-box .day {
+            color: #ff0080;
+            font-size: 1.3em;
+            font-weight: 900;
+        }
+        .date-box .full-date {
+            color: #00ff88;
+            font-size: 0.95em;
+            margin-top: 5px;
+        }
+        .logo { font-size: 2.8em; margin-bottom: 5px; filter: drop-shadow(0 0 10px #ff0080); }
+        h1 { 
+            background: linear-gradient(90deg, #ff0080, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.7em; 
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+        .packages {
+            background: rgba(26,26,26,0.7);
             padding: 15px;
             border-radius: 12px;
             margin: 15px 0;
-            border: 1px solid #333;
+            border: 1px solid #444;
         }
-        .packages h3 { color: #ffaa00; margin-bottom: 10px; font-size: 1.1em; }
+        .packages h3 { 
+            color: #ff8c00; 
+            margin-bottom: 12px; 
+            font-size: 1.2em;
+            font-weight: 700;
+        }
         .pack {
             display: flex;
             justify-content: space-between;
-            padding: 8px 0;
+            padding: 10px 5px;
             border-bottom: 1px dashed #333;
-            font-size: 1em;
+            font-size: 1.05em;
         }
         .pack:last-child { border-bottom: none; }
-        .pack span:first-child { color: #ccc; }
-        .pack span:last-child { color: #ff0055; font-weight: bold; }
+        .pack span:first-child { color: #ddd; }
+        .pack span:last-child { 
+            color: #00ff88; 
+            font-weight: bold;
+            background: rgba(0,255,136,0.1);
+            padding: 2px 8px;
+            border-radius: 6px;
+        }
         input {
             width: 100%;
-            padding: 14px;
+            padding: 15px;
             margin: 15px 0 10px 0;
-            border: 2px solid #ff0055;
+            border: 2px solid #ff0080;
             background: #111;
             color: white;
-            border-radius: 10px;
+            border-radius: 12px;
             font-size: 1.1em;
             text-align: center;
         }
+        input:focus { outline: none; box-shadow: 0 0 15px #ff0080; }
         .btn {
             width: 100%;
-            padding: 14px;
-            background: #ff0055;
+            padding: 15px;
+            background: linear-gradient(90deg, #ff0080, #ff8c00);
             color: white;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             font-size: 1.2em;
             font-weight: bold;
             cursor: pointer;
+            transition: 0.3s;
         }
+        .btn:active { transform: scale(0.97); }
         .support {
             margin-top: 20px;
             padding-top: 15px;
             border-top: 1px solid #333;
         }
-        .support p { color: #aaa; font-size: 0.9em; margin: 5px 0; }
-        .support .phone { color: #00ff88; font-size: 1.1em; font-weight: bold; }
+        .support p { color: #aaa; font-size: 0.9em; margin: 6px 0; }
+        .support .phone { 
+            color: #00ff88; 
+            font-size: 1.3em; 
+            font-weight: 900;
+            direction: ltr;
+            display: inline-block;
+        }
+        #soundBtn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #ff0080;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 0 0 15px #ff0080;
+        }
     </style>
 </head>
 <body>
-    <!-- نغمة الترحيب -->
-    <audio id="welcomeSound">
-        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2cba4c6e7d.mp3" type="audio/mpeg">
-    </audio>
+    <!-- زر تشغيل النغمة يدوي عشان يضمن تشتغل -->
+    <button id="soundBtn" onclick="playWelcome()">🔊</button>
 
     <div class="login-box">
         <div class="dhikr">
-            سُبْحَانَ اللَّهِ وَبِحَمْدِهِ
+            سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ الْعَظِيمِ
+        </div>
+
+        <div class="date-box">
+            <div class="day" id="dayName"></div>
+            <div class="full-date" id="fullDate"></div>
         </div>
         
         <div class="logo">🌐</div>
@@ -108,6 +171,7 @@
             <div class="pack"><span>10 جيجا</span><span>7 د.ل</span></div>
             <div class="pack"><span>يوم كامل</span><span>3 د.ل</span></div>
             <div class="pack"><span>أسبوع كامل</span><span>15 د.ل</span></div>
+            <div class="pack"><span>شهر كامل</span><span>45 د.ل</span></div>
         </div>
         
         <form onsubmit="login(); return false;">
@@ -116,22 +180,38 @@
         </form>
         
         <div class="support">
-            <p>الدعم الفني 24 ساعة</p>
-            <p class="phone">📞 218844933543</p>
+            <p>الدعم الفني 24/7</p>
+            <p class="phone">📞 +218 91 844 9335</p>
+            <p class="phone">📞 +218 92 844 9335</p>
             <p style="font-size:0.8em; margin-top:10px;">تصميم صفحات هوتسبوت: 75 د.ل</p>
         </div>
     </div>
 
-    <!-- نغمة النجاح -->
+    <!-- النغمات -->
+    <audio id="welcomeSound">
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2cba4c6e7d.mp3" type="audio/mpeg">
+    </audio>
     <audio id="successSound">
         <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_0625c1539c.mp3" type="audio/mpeg">
     </audio>
 
     <script>
-        // شغل نغمة الترحيب لما يضغط في الصفحة
-        document.body.addEventListener('click', function() {
+        // 1. التاريخ يتحدث تلقائي
+        const days = ['الأحد', 'الإثنين', 'الثلاثاء', 'الأربعاء', 'الخميس', 'الجمعة', 'السبت'];
+        const months = ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'];
+        
+        function updateDate() {
+            const now = new Date();
+            document.getElementById('dayName').innerText = days[now.getDay()];
+            document.getElementById('fullDate').innerText = now.getDate() + ' ' + months[now.getMonth()] + ' ' + now.getFullYear();
+        }
+        updateDate();
+
+        // 2. النغمة - زر تشغيل مضمون
+        function playWelcome() {
             document.getElementById('welcomeSound').play();
-        }, { once: true });
+            document.getElementById('soundBtn').style.display = 'none';
+        }
 
         function login() {
             document.getElementById('successSound').play();
