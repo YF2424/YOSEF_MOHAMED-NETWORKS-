@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOSEF NETWORKS Hotspot</title>
+    <title>YOSEF NETWORKS - بنغازي</title>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -18,17 +17,16 @@
             padding: 15px;
         }
         .login-box {
-            background: rgba(0,0,0,0.85);
+            background: rgba(0,0,0,0.9);
             padding: 25px 20px;
             border-radius: 20px;
             text-align: center;
-            max-width: 420px;
+            max-width: 440px;
             width: 100%;
-            border: 2px solid #ff0080;
-            box-shadow: 0 0 35px rgba(255,0,128,0.6);
-            backdrop-filter: blur(10px);
+            border: 2px solid #00ff88;
+            box-shadow: 0 0 35px rgba(0,255,136,0.5);
         }
-        .dhikr {
+        .dua {
             background: linear-gradient(90deg, #00ff88, #00b8ff);
             color: #000;
             padding: 10px;
@@ -42,25 +40,30 @@
             padding: 12px;
             border-radius: 12px;
             margin-bottom: 15px;
-            border: 1px solid #ff0080;
+            border: 1px solid #00ff88;
         }
         .date-box .day {
-            color: #ff0080;
+            color: #00ff88;
             font-size: 1.3em;
             font-weight: 900;
         }
         .date-box .full-date {
-            color: #00ff88;
+            color: #ff8c00;
             font-size: 0.95em;
             margin-top: 5px;
         }
-        .logo { font-size: 2.8em; margin-bottom: 5px; filter: drop-shadow(0 0 10px #ff0080); }
+        .location {
+            color: #aaa;
+            font-size: 0.9em;
+            margin: 8px 0;
+        }
+        .logo { font-size: 2.8em; margin-bottom: 5px; filter: drop-shadow(0 0 10px #00ff88); }
         h1 { 
-            background: linear-gradient(90deg, #ff0080, #ff8c00);
+            background: linear-gradient(90deg, #00ff88, #ff8c00);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 1.7em; 
-            margin-bottom: 10px;
+            font-size: 1.6em; 
+            margin-bottom: 5px;
             font-weight: 900;
         }
         .packages {
@@ -96,62 +99,62 @@
             width: 100%;
             padding: 15px;
             margin: 15px 0 10px 0;
-            border: 2px solid #ff0080;
+            border: 2px solid #00ff88;
             background: #111;
             color: white;
             border-radius: 12px;
             font-size: 1.1em;
             text-align: center;
         }
-        input:focus { outline: none; box-shadow: 0 0 15px #ff0080; }
         .btn {
             width: 100%;
             padding: 15px;
-            background: linear-gradient(90deg, #ff0080, #ff8c00);
-            color: white;
+            background: linear-gradient(90deg, #00ff88, #ff8c00);
+            color: #000;
             border: none;
             border-radius: 12px;
             font-size: 1.2em;
-            font-weight: bold;
+            font-weight: 900;
             cursor: pointer;
-            transition: 0.3s;
         }
-        .btn:active { transform: scale(0.97); }
         .support {
             margin-top: 20px;
             padding-top: 15px;
             border-top: 1px solid #333;
         }
         .support p { color: #aaa; font-size: 0.9em; margin: 6px 0; }
+        .support .name { color: #00ff88; font-size: 1.1em; font-weight: 700; }
         .support .phone { 
-            color: #00ff88; 
-            font-size: 1.3em; 
+            color: #ff8c00; 
+            font-size: 1.2em; 
             font-weight: 900;
             direction: ltr;
             display: inline-block;
+            margin: 5px 0;
         }
         #soundBtn {
             position: fixed;
             bottom: 20px;
             left: 20px;
-            background: #ff0080;
-            color: white;
+            background: #00ff88;
+            color: #000;
             border: none;
-            padding: 12px;
-            border-radius: 50%;
-            font-size: 1.5em;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 1em;
+            font-weight: 700;
             cursor: pointer;
-            box-shadow: 0 0 15px #ff0080;
+            box-shadow: 0 0 15px #00ff88;
         }
     </style>
 </head>
 <body>
-    <!-- زر تشغيل النغمة يدوي عشان يضمن تشتغل -->
-    <button id="soundBtn" onclick="playWelcome()">🔊</button>
+    <!-- زر تشغيل القرآن -->
+    <button id="soundBtn" onclick="playQuran()">📖 شغل القرآن</button>
 
     <div class="login-box">
-        <div class="dhikr">
-            سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ الْعَظِيمِ
+        <div class="dua">
+            اللَّهُمَّ احْفَظْنَا وَاحْفَظِ الْمُسْلِمِينَ جَمِيعاً
         </div>
 
         <div class="date-box">
@@ -159,8 +162,9 @@
             <div class="full-date" id="fullDate"></div>
         </div>
         
-        <div class="logo">🌐</div>
+        <div class="logo">🕌</div>
         <h1>YOSEF MOHAMED NETWORKS</h1>
+        <p class="location">📍 بنغازي - ليبيا</p>
         <p style="color:#ccc; margin-bottom:15px; font-size:0.9em;">مرحباً بك في شبكتنا</p>
         
         <div class="packages">
@@ -180,16 +184,17 @@
         </form>
         
         <div class="support">
-            <p>الدعم الفني 24/7</p>
-            <p class="phone">📞 +218 94 4833543</p>
-            <p class="phone">📞 +218 94 4833543 </p>
+            <p>الدعم الفني</p>
+            <p class="name">يوسف محمد</p>
+            <p>للتواصل على الأرقام التالية:</p>
+            <p class="phone">📞 0944933543</p>
             <p style="font-size:0.8em; margin-top:10px;">تصميم صفحات هوتسبوت: 75 د.ل</p>
         </div>
     </div>
 
-    <!-- النغمات -->
-    <audio id="welcomeSound">
-        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2cba4c6e7d.mp3" type="audio/mpeg">
+    <!-- نغمة قرآن قصيرة -->
+    <audio id="quranSound" loop>
+        <source src="https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3" type="audio/mpeg">
     </audio>
     <audio id="successSound">
         <source src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_0625c1539c.mp3" type="audio/mpeg">
@@ -207,10 +212,16 @@
         }
         updateDate();
 
-        // 2. النغمة - زر تشغيل مضمون
-        function playWelcome() {
-            document.getElementById('welcomeSound').play();
-            document.getElementById('soundBtn').style.display = 'none';
+        // 2. تشغيل القرآن
+        function playQuran() {
+            const quran = document.getElementById('quranSound');
+            if (quran.paused) {
+                quran.play();
+                document.getElementById('soundBtn').innerText = '⏸️ إيقاف القرآن';
+            } else {
+                quran.pause();
+                document.getElementById('soundBtn').innerText = '📖 شغل القرآن';
+            }
         }
 
         function login() {
